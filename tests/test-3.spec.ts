@@ -8,5 +8,5 @@ test('test', async ({ page }) => {
   await page.getByRole('button', { name: 'Continue', exact: true }).click();
   await page.getByLabel('Password', { exact: true }).fill('pruebas123');
   await page.getByRole('button', { name: 'Continue' }).click();
-  await expect(page.getByText('Password is incorrecta. Try')).toBeVisible();
+  await expect(page.getByText('Password is incorrect. Try')).toBeVisible();
 });
